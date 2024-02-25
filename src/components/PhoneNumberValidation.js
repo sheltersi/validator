@@ -87,7 +87,7 @@ const PhoneNumberValidation = () => {
         <div class="row">
           <div class="col">
             <label htmlFor="formFile" className="form-label"><b>IMPORT A CSV File </b></label>
-            <input className="form-control border border-2 border-success" type="file" id="formFile" onChange={handleFileUpload} accept=".csv" />
+            <input className="form-control border border-2 border-success" type="file" id="formFile" onChange={handleFileUpload} accept=".csv" required />
           </div>
         </div>
         <div className="ms-2 mt-2 mb-4 col-4">
@@ -96,8 +96,8 @@ const PhoneNumberValidation = () => {
       </div>
 
       <div className="mb-5">
-        <button className="btn btn-primary me-4" onClick={() => downloadValidNumbers('csv')}>Download CSV</button>
-        <button className="btn btn-primary" onClick={() => downloadValidNumbers('txt')}>Download TXT</button>
+        <button className="btn btn-primary me-4" onClick={() => downloadValidNumbers('csv')}>Download Valid Numbers as .csv</button>
+        <button className="btn btn-success" onClick={() => downloadValidNumbers('txt')}>Download Valid Numbers as .txt</button>
       </div>
 
       <div class="mt-5">
