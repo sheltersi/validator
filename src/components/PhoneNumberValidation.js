@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import Footer from './Footer';
 import Numlookupapi from '@everapi/numlookupapi-js';
 import Papa from 'papaparse'; // Library for parsing CSV
 import { saveAs } from 'file-saver'; // Library for saving files
@@ -72,6 +73,7 @@ const PhoneNumberValidation = () => {
   };
 
   return (
+    <div>
     <div className="card col-8 mx-auto bg-body-secondary pt-4 mt-4 val-card">
       <div className=" ps-4 pe-4">
 
@@ -143,6 +145,8 @@ const PhoneNumberValidation = () => {
         </table>
       </div>
       </div>
+    </div>
+    < Footer />
     </div>
   );
 };

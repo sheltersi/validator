@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import Footer from './Footer';
 import Numlookupapi from '@everapi/numlookupapi-js';
 
 const ViewUsage = () => {
@@ -29,7 +30,8 @@ const ViewUsage = () => {
   };
 
   return (
-    <div className="card pt-2 mt-4 col-8 mx-auto val-card">
+    <div>
+    <div className="card pt-2 mt-5 col-8 mx-auto val-card">
       <div className="bg-body-secondary mx-3 my-3">
       <div className="mt-3">
          <p className=''><span className='text-danger font-monospace font-weight-bold bg-light'>Note:</span> To be able to view usage you have to enter your apiKey!!</p>
@@ -69,7 +71,12 @@ const ViewUsage = () => {
 
       <a href="/" class="btn btn-dark mt-3">Back</a>
     </div>
+   
     </div>
+    <div className='view-usage-footer'>
+    <Footer />
+    </div>
+     </div>
   );
 };
 

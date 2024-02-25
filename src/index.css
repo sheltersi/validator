@@ -15,3 +15,28 @@ code {
 .white-bg{
   background-color: grey;
 }
+
+.footer{
+  height:200px;
+  background-color: #013220;
+  color:white;
+  margin-top: 200px;
+}
+
+nav{
+  background-color: #013220;
+  color:white;
+}
+
+.footer-contents{
+  text-align: center;
+}
+
+.active {
+  color: red; /* Example styling for active links */
+  font-weight: bold;
+}
+
+.view-usage-footer{
+  margin-top: 200px;
+}
