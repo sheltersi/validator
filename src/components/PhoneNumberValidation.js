@@ -53,7 +53,9 @@ const PhoneNumberValidation = () => {
   };
 
   const downloadValidNumbers = (format) => {
-    const validNumbers = validationResults.filter(result => result.valid).map(result => result.phoneNumber);
+    const validNumbers = validationResults
+    .filter(result => result.valid)
+    .map(result => `0${result.phoneNumber}`);
     let content;
     let filename;
     if (format === 'csv') {
@@ -118,7 +120,7 @@ const PhoneNumberValidation = () => {
                   {validationResults
                     .filter((result) => result.valid)
                     .map((result, index) => (
-                      <li key={index}>{result.phoneNumber}</li>
+                      <li key={index}>{`0${result.phoneNumber}`}</li>
                     ))}
                 </ul>
               </td>
@@ -132,7 +134,7 @@ const PhoneNumberValidation = () => {
                   {validationResults
                     .filter((result) => !result.valid)
                     .map((result, index) => (
-                      <li key={index}>{result.phoneNumber}</li>
+                      <li key={index}>{`0${result.phoneNumber}`}</li>
                     ))}
                 </ul>
               </td>
